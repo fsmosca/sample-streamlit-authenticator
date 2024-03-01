@@ -25,14 +25,14 @@ def MenuButtons():
     if 'authentication_status' not in ss:
         ss.authentication_status = False
 
-    # Always show the home navigator.
+    # Always show the home and login navigators.
     HomeNav()
     LoginNav()
 
     # Show the other page navigators depending on the users' role.
     if ss["authentication_status"]:
 
-        # (1) Only the admin role can access page 1 and page 2.
+        # (1) Only the admin role can access page 1 and other pages.
         # In a pre-defined ROLES, get all the usernames with admin role.
         admins = [k for k, v in ROLES.items() if v == 'admin']
 
