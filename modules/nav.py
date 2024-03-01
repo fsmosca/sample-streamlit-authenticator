@@ -9,6 +9,10 @@ def HomeNav():
     st.sidebar.page_link("streamlit_app.py", label="Home", icon='🏠')
 
 
+def LoginNav():
+    st.sidebar.page_link("pages/login.py", label="Login/out", icon='🔐')
+
+
 def Page1Nav():
     st.sidebar.page_link("pages/page1.py", label="Page 1", icon='✈️')
 
@@ -23,6 +27,7 @@ def MenuButtons():
 
     # Always show the home navigator.
     HomeNav()
+    LoginNav()
 
     # Show the other page navigators depending on the users' role.
     if ss["authentication_status"]:
