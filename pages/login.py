@@ -10,7 +10,7 @@ with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 
-st.header('Login page')
+st.header('Login/out page')
 
 
 authenticator = stauth.Authenticate(
