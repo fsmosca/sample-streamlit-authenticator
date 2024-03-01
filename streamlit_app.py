@@ -1,40 +1,20 @@
 import streamlit as st
 from streamlit import session_state as ss
-import streamlit_authenticator as stauth
-import yaml
-from yaml.loader import SafeLoader
 from modules.nav import MenuButtons
 
 
-with open('config.yaml') as file:
-    config = yaml.load(file, Loader=SafeLoader)
+# If user refreshes the page, go to the login page because
+# in there we have the facility to check the login status.
+if 'authentication_status' not in ss:
+    st.switch_page('./pages/login.py')
 
 
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
-
-
+MenuButtons()
 st.header('Home page')
 
-authenticator.login()
 
-if ss["authentication_status"]:
-    authenticator.logout()    
-    st.write(f'Welcome *{ss["name"]}*')
-
-elif ss["authentication_status"] is False:
-    st.error('Username/password is incorrect')
-elif ss["authentication_status"] is None:
-    st.warning('Please enter your username and password')
-
-# We call below code in case of registration, reset password, etc.
-with open('config.yaml', 'w') as file:
-    yaml.dump(config, file, default_flow_style=False)
-
-# Call this late because we show the page navigator depending on who logged in.
-MenuButtons()
+# Protected content in home page.
+if ss.authentication_status:
+    st.write('This content is only accessible for logged in users.')
+else:
+    st.write('Please log in on login page.')
