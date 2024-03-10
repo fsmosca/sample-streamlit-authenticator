@@ -7,7 +7,7 @@ def HomeNav():
 
 
 def LoginNav():
-    st.sidebar.page_link("pages/login.py", label="Login/out", icon='🔐')
+    st.sidebar.page_link("pages/account.py", label="Account", icon='🔐')
 
 
 def Page1Nav():
@@ -21,7 +21,7 @@ def Page2Nav():
 def MenuButtons(user_roles=None):
     if user_roles is None:
         user_roles = {}
-        
+
     if 'authentication_status' not in ss:
         ss.authentication_status = False
 
