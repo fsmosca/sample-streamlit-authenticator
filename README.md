@@ -1,6 +1,6 @@
 # sample-streamlit-authenticator
 
-Authenticates users to use the a multi-page [streamlit](https://streamlit.io/) app using [streamlit-authenticator library](https://github.com/mkhorasani/Streamlit-Authenticator). This sample app can survive page reloads courtesy from streamlit-authenticator library.
+Authenticates users to use the multi-page [streamlit](https://streamlit.io/) app using [streamlit-authenticator library](https://github.com/mkhorasani/Streamlit-Authenticator). This sample app can survive page reloads courtesy from streamlit-authenticator library.
 
 **jsmith**
 
