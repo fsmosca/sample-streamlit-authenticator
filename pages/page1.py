@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit import session_state as ss
 from modules.nav import MenuButtons
+from pages.login import get_roles
 
 
 # If user refreshes the page, go to the login page because
@@ -8,8 +9,7 @@ from modules.nav import MenuButtons
 if 'authentication_status' not in ss:
     st.switch_page('./pages/login.py')
 
-
-MenuButtons()
+MenuButtons(get_roles())
 st.header('Page 1')
 
 st.write('This page is only accessible by the admin.')
