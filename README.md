@@ -1,5 +1,10 @@
 # sample-streamlit-authenticator
-Authenticates users to use the streamlit App.
+
+Authenticates users to use the streamlit App designed for multi-page app.
+
+
+![image](https://github.com/fsmosca/sample-streamlit-authenticator/assets/22366935/e9f646b8-2c02-43ee-9b2a-1255b3b79d6b)
+
 
 ## Credentials
 
