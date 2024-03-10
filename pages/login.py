@@ -10,8 +10,8 @@ def get_roles():
     """Gets user roles based on config file."""
     with open('config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
-        credentials = config['credentials']
-    
+
+    credentials = config['credentials']    
     return {username: user_info['role'] for username, user_info in credentials['usernames'].items()}
 
 
