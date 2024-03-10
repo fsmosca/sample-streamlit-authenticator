@@ -2,13 +2,7 @@
 
 Authenticates users to use the multi-page [streamlit](https://streamlit.io/) app using [streamlit-authenticator library](https://github.com/mkhorasani/Streamlit-Authenticator). This sample app can survive page reloads courtesy from streamlit-authenticator library.
 
-**jsmith**
-
-![image](https://github.com/fsmosca/sample-streamlit-authenticator/assets/22366935/e9f646b8-2c02-43ee-9b2a-1255b3b79d6b)
-
-**rbriggs**
-
-![image](https://github.com/fsmosca/sample-streamlit-authenticator/assets/22366935/20c6b0dc-ff04-4ce4-b890-0d93f7619520)
+![image](https://github.com/fsmosca/sample-streamlit-authenticator/assets/22366935/727cf7af-555f-4f21-aeed-f8ddca8c28aa)
 
 ## Register page with role
 
