@@ -6,6 +6,15 @@ from yaml.loader import SafeLoader
 from modules.nav import MenuButtons
 
 
+def get_roles():
+    """Gets user roles based on config file."""
+    with open('config.yaml') as file:
+        config = yaml.load(file, Loader=SafeLoader)
+        credentials = config['credentials']
+    
+    return {username: user_info['role'] for username, user_info in credentials['usernames'].items()}
+
+
 with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
@@ -37,4 +46,4 @@ with open('config.yaml', 'w') as file:
     yaml.dump(config, file, default_flow_style=False)
 
 # Call this late because we show the page navigator depending on who logged in.
-MenuButtons()
+MenuButtons(get_roles())
