@@ -6,16 +6,18 @@ from yaml.loader import SafeLoader
 from modules.nav import MenuButtons
 
 
+CONFIG_FILENAME = 'config.yaml'
+
 def get_roles():
     """Gets user roles based on config file."""
-    with open('config.yaml') as file:
+    with open(CONFIG_FILENAME) as file:
         config = yaml.load(file, Loader=SafeLoader)
-
-    credentials = config['credentials']    
+        credentials = config['credentials'] 
+           
     return {username: user_info['role'] for username, user_info in credentials['usernames'].items()}
 
 
-with open('config.yaml') as file:
+with open(CONFIG_FILENAME) as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 
@@ -42,7 +44,7 @@ elif ss["authentication_status"] is None:
     st.warning('Please enter your username and password')
 
 # We call below code in case of registration, reset password, etc.
-with open('config.yaml', 'w') as file:
+with open(CONFIG_FILENAME, 'w') as file:
     yaml.dump(config, file, default_flow_style=False)
 
 # Call this late because we show the page navigator depending on who logged in.
