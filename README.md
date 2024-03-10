@@ -10,6 +10,10 @@ Authenticates users to use the a multi-page [streamlit](https://streamlit.io/) a
 
 ![image](https://github.com/fsmosca/sample-streamlit-authenticator/assets/22366935/20c6b0dc-ff04-4ce4-b890-0d93f7619520)
 
+## Register page with role
+
+![image](https://github.com/fsmosca/sample-streamlit-authenticator/assets/22366935/6f3b60fb-9657-44e1-aa9c-e81a3f1e7dee)
+
 ## Credentials
 
 ```
