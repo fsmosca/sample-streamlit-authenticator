@@ -1,14 +1,18 @@
-# sample-streamlit-authenticator
+# Sample Streamlit authenticator
 
 Authenticates users to use the multi-page [streamlit](https://streamlit.io/) app using [streamlit-authenticator library](https://github.com/mkhorasani/Streamlit-Authenticator). This sample app can survive page reloads courtesy from streamlit-authenticator library.
 
 ![image](https://github.com/fsmosca/sample-streamlit-authenticator/assets/22366935/727cf7af-555f-4f21-aeed-f8ddca8c28aa)
 
-## Register page with role
+## A. Register page with role
 
 ![image](https://github.com/fsmosca/sample-streamlit-authenticator/assets/22366935/6f3b60fb-9657-44e1-aa9c-e81a3f1e7dee)
 
-## Credentials
+## B. Saving users info in config.yaml
+
+If you deploy an app in streamlit community cloud, and you accept registration, do not save the config.yaml file in that streamlit container because there is no guarantee that the file will be saved. You can save it in other cloud storage such as Deta space.
+
+## C. Credentials
 
 ```
 username: jsmith, password: abc
