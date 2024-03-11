@@ -17,6 +17,11 @@ with open(CONFIG_FILENAME) as file:
 
 
 def add_role(username_to_add_role, new_role='user'):
+    """Append role to the config file.
+
+    In the registration widget, there is a role selectbox. This is added
+    because streamlit-authenticator does not support it.
+    """
     with open(CONFIG_FILENAME) as file:
         config = yaml.load(file, Loader=SafeLoader)
 
