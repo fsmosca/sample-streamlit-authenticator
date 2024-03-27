@@ -1,2 +1,2 @@
 streamlit==1.32.2
-git+https://github.com/fsmosca/Streamlit-Authenticator.git@add-forgotpassword-key
+streamlit-authenticator==0.3.2
